@@ -45,7 +45,7 @@ docker run \
 You can specify any Python script as the entry point using the SCRIPT_NAME environment variable. If no script is specified, the container will default to src/main.py.
 
 ## Example
-# File Structure
+### File Structure
 ```bash
 .
 ├── requirements.txt
@@ -55,7 +55,7 @@ You can specify any Python script as the entry point using the SCRIPT_NAME envir
 │   └── alternative_script.py
 ```
 
-# Running `main.py`
+### Running `main.py`
 ```bash
 docker run \
   -v $(pwd):/app \
@@ -63,7 +63,7 @@ docker run \
   python-app
 ```
 
-# Running `alternative_script.py`
+### Running `alternative_script.py`
 ```bash
 docker run \
   -v $(pwd):/app \
@@ -71,15 +71,15 @@ docker run \
   python-app
 ```
 
-# Environment Variables
+## Environment Variables
 `SCRIPT_NAME:` Path to the Python script to execute. Defaults to `src/main.py`.
 Any additional environment variables can be passed using `-e` during `docker run`.
 
-# Development Notes
+## Development Notes
 Modifying Dependencies
 Update the `requirements.txt` file with any new dependencies your application requires. These will be installed dynamically at runtime.
 
-# Debugging
+## Debugging
 If issues occur:
 
 Ensure the `SCRIPT_NAME` points to a valid Python script in the mounted directory.
