@@ -19,6 +19,9 @@ RUN apt-get update -qq -y && \
     rm chromedriver-linux64.zip && \
     mv chromedriver /usr/local/bin/
 
+# Install Selenium
+RUN pip install selenium==4.25.0
+
 # Set working directory
 WORKDIR /app
 
